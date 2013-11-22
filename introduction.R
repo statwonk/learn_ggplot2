@@ -8,4 +8,10 @@ library(ggplot2)
 str(iris)
 
 ggplot(data = iris, aes(x = Sepal.Length)) +
-  geom_histogram()
+  geom_histogram() # this is a simple example of a histogram
+
+ggplot(data = iris, aes(x = Sepal.Length)) +
+  geom_histogram() + # this is a simple example of a histogram
+  facet_wrap( ~ Species) +
+  ggtitle("Iris Dataset, learning ggplot!")
+
